@@ -1,13 +1,5 @@
 *** Variables ***
-${chrien}    chrien.4q.si  
-${aquatrend}    aquatrend.4q.si
-@{servers}    ${chrien}    ${aquatrend}
-${david.bella}   david.bella
-${michal.botka}     michal.botka
-${custumer_3}    customer3
-@{customers}    ${david.bella}    ${michal.botka}    ${custumer_3}
-${password}     admin
-@{passwords}    ${password}
+
 # úvodná stránka *******************
 ${menu _bar}     xpath=//android.widget.Button[@text,'Otvoriť navigačnú ponuku']
 # alternative fur deutschland  //android.widget.FrameLayout[@resource-id='android:id/content']//android.view.View//android.view.View//android.view.View//android.view.View//android.view.View//android.widget.Button[@text='Otvoriť navigačnú ponuku']
