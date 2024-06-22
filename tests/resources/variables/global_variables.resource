@@ -1,12 +1,12 @@
 *** Variables ***
-${chrien}    chrien.4q.si  
-${aquatrend}    aquatrend.4q.si
+${chrien}     
+${aquatrend}   
 @{servers}    ${chrien}    ${aquatrend}
-${david.bella}   david.bella
-${michal.botka}     michal.botka
+${chrien_name}  
+${aquatrend_name}     
 ${custumer_3}    customer3
-@{customers}    ${david.bella}    ${michal.botka}    ${custumer_3}
-${password}     admin
+@{customers}    ${chrien_name}    ${aquatrend_name}    ${custumer_3}
+${password}     heslo
 @{passwords}    ${password}
 # úvodná stránka *******************
 ${menu _bar}     xpath=//android.widget.Button[@text,'Otvoriť navigačnú ponuku']
