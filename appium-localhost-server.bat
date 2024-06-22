@@ -1,0 +1,1 @@
+appium --address localhost --port 4725 --use-drivers uiautomator2 --base-path /wd/hub 

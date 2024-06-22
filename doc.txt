@@ -1,0 +1,8 @@
+C:\Users\BigON>adb shell
+a54x:/ $ dumpsys window displays | grep -E 'mCurrentFocus'
+  mCurrentFocus=Window{82c6ec0 u0 com.sec.android.app.launcher/com.sec.android.app.launcher.activities.LauncherActivity}
+a54x:/ $ dumpsys window displays | grep -E 'mCurrentFocus'
+  mCurrentFocus=Window{48bd066 u0 sk.fourq.ordo.chrien.dealer/sk.fourq.ordo.chrien.dealer.MainActivity}
+a54x:/ $ dumpsys window displays | grep -E 'mCurrentFocus'
+  mCurrentFocus=Window{48bd066 u0 sk.fourq.ordo.chrien.dealer/sk.fourq.ordo.chrien.dealer.MainActivity}
+a54x:/ $
