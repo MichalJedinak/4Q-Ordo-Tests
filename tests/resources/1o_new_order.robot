@@ -9,8 +9,8 @@ ${select_zakaznik}    xpath=//android.widget.EditText[@text,'' and @index,'1']
 
 ${select_datum}    xpath=//android.widget.EditText[@text,'25.06.2024, Dátum dodania' and @index,'1']
 @{date_array}
-${pičifuzindex}    ${0}
-${xxx}     xpath=//android.view.View[@text,'list-view']//android.view.View//android.widget.ScrollView[${pičifuzindex}]
+${index_xpath?}    ${0}
+${zakaznik}     xpath=//android.view.View[@text,'list-view']//android.view.View//android.widget.ScrollView[${index_xpath?}]
 
 ${select_platba}    xpath=//android.widget.EditText[@text,'Forma úhrady' and @index,'2']
 ${hotovost}    xpath=//android.view.View[@text,'entity-id:CASH,entity-status:N/A,entity-sync-status:SYNCEDHotovosť']
@@ -29,10 +29,12 @@ Vytvorenie novej nedokončenej objednávky bez zadania položiek
     [Arguments]
     Click on the xpath from arraylist if exist    @{nastenka_list[0]}
     Click Element    ${plus}
-    Vyber si svojho zakaznika    ${select_zakaznik}    ${xxx}    ${20}
+    Vyber si svojho zakaznika    ${select_zakaznik}    ${zakaznik}    ${20}
     Click on the xpath if exist    ${ulozit_objednavku}
 Nastav index pre xpath
-    [Documentation]   vyber xpat pre ktoru cheš nastaviť index cety 
+    [Documentation]   nastavenie hodnoty pre premennú kde hodnotou má byť index ...
+    ...               ktorý sa nastavý  ako index v xpath  ...
+    ...               
     [Arguments]    ${variable}    ${xpath}    ${index}
     ${variable}   Set Variable    ${index}
     ${xpath...}   Create List    ${xpath}    [${index}]
@@ -63,16 +65,16 @@ Zahodenie novej nedokončenej objednávky bez položiek
     [Arguments]
     Click on the xpath from arraylist if exist    @{nastenka_list[0]}
     Click Element    ${plus}
-    Vyber si svojho zakaznika    ${select_zakaznik}    ${xxx}    ${20}
+    Vyber si svojho zakaznika    ${select_zakaznik}    ${zakaznik}    ${20}
     Sleep    2s
     Zahod zmeny a neurob ojebavku
 Vyber si svojho zakaznika
     [Documentation]    predpoklad že sa bude dať pomocou indexu v xpath vyberať zakaznika...
     ...               a nie potrebne použiť zoznam zakaznikov ??,   ...
     ...  prva xpath je na intut s zakaznikm nasledne pokus o pouzitie cesty s upravou indexu
-    ...   a treti je samotny index pre cestu, index je ${pičifuzindex}
+    ...   a treti je samotny index pre cestu, index je ${index_xpath?}
     [Arguments]    ${xpath_1}   ${xpath_2}    ${i}     #xpath  a index s litu sposoboov 
-    ${pičifuzindex}    Set Variable    ${i}
+    ${index_xpath?}    Set Variable    ${i}
     Log To Console    ${xpath2}
     If the desired path to the element exist click on it    ${xpath_1}
     Click on the xpath if exist    ${xpath_2}

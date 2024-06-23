@@ -16,8 +16,9 @@ Click on the xpath only if is visible
     IF    ${isvisible}
         Click Element    ${xpath}
     ELSE
-        Log To Console    message!!! xpath '${xpath}' is : ${isvisible}'
+        Log To Console    message!!! xpath '${xpath}' is visible it`s : ${isvisible}'
     END
+    
 Click on the xpath from arraylist if exist
     [Documentation]     arg = xpath vybranemo menu s nastenka napr. nastavenia arg_index je index pre vybrané munu s listu nástrenky
       # ... napríklad chceme vybrať objednávky arg bude ${objednaky}  a index 0 
@@ -49,3 +50,12 @@ Neviem ako ho nazvať
     [Arguments]    ${xpath}    ${array_1[index]}
     If the desired path to the element exist click on it    ${xpath}
     Click on the xpath from arraylist if exist    ${array_1[index]}
+
+Insert text if clicked on existing path to the element
+    [Documentation]    Vlož text ak bolo kliknute na existujucu cestu k elemntu ...
+    ...                argument  cesta a text na vlozenie
+    [Arguments]    ${xpath}    ${text}
+    Click on the xpath if exist    ${xpath}
+    Input Text    ${xpath}    ${text}
+    Sleep    2s
+    Log To Console    Na ceste: '${xpath}' bol vložený text :'${text}'
