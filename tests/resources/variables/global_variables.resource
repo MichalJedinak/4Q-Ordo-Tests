@@ -57,10 +57,3 @@ ${potvrd_objednavku}    xpath=//android.widget.Button[@text,'Potvrdiť objednáv
 ${dalej}    xpath=//android.widget.Button[@text,'Ďalej']
 ${okno_potvrdenie_potvrdit}    xpath=//android.widget.Button[@text,'Potvrdiť'okno_pokracovatbezpolohy]
 ${okno_pokracovatbezpolohy}    xpath=//android.widget.Button[@text,'Pokračovať bez polohy']
-
-# Úlohy 
-${lupa_ulohy}    xpath=//android.view.View[@text,'multi-tab']//android.view.View//android.widget.Button[@text,'Vyhľadaj']
-${filter_lupa}    xpath=////android.view.View[@text,'multi-tab']//android.view.View//android.widget.Button[@text,'Filtruj']
-${vseobecne}    xpath=//android.view.View[@text,'multi-tab']//android.view.View//android.view.View[@text,'VšeobecnéKarta 1 z 2']
-${stretnutia}    xpath=//android.view.View[@text,'multi-tab']//android.view.View//android.view.View[@text,'StretnutiaKarta 2 z 2']
-${ulohy_plus_button}    xpath=//android.view.View[@text,'multi-tab']//android.widget.Button[@text,'Pridať novú úlohu']
